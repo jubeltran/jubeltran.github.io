@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="widht-device-widht,initial-scale=1.0">
+    <title>Júlia Beltran</title>
+    <link rel="icon" href="../img/JB.png">
+    <link type="text/css" rel="stylesheet" media="screen" href="../css/estilo.css"/>
+    <script type="text/javascript" src="../js/script.js"></script>
+</head>
+
+    <body>
+        <header id="principal" class="normal">
+            <nav role="navigation">
+                <div id="menuToggle">
+                  <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                <ul id="menu">
+                  <li><a href="../index.html">INÍCIO</a></li>
+                  <li><a href="../html/contato.html">CONTATO</a></li>
+                </ul>
+               </div>
+              </nav>
+            <img id="minhaFoto" class="foto_sem_mouse" src="../img/foto.jpeg" alt="Foto pessoal" >
+            <div>
+            <h1>Júlia Beltran</h1>
+            <h2>Técnica em Informática</h2>
+            <button id="acender"><img src="../img/sun.png"></button>
+            <button id="apagar"><img src="../img/moon.png"></button>
+            </div>
+
+        </header>
+
+        <section class="nude2">
+        <h2>FORMULÁRIO</h2>
+        <form>
+            <label for="nome">Nome completo:</label><br>
+            <input type="text" id="nome" name="nome"><br>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email"><br>
+            <label for="msg">Deixe sua mensagem:</label><br>
+            <textarea id="msg" name="mensagem" rows="5" cols="20"></textarea>
+            <input type="submit" id="enviar" name="ENVIAR">
+        </form>
+        </section>
+        
+        <footer class="white">
+            <h2>OUTROS MEIOS DE CONTATO</h2>
+            <h4>juliamirandabeltran@gmail.com</h4>
+            <h4>(11) 954743424 - Whatsapp</h4>
+            <h4>@ju_beltran | Júlia Beltran</h4>
+        </footer>
+
+    </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $("#acender").click(function(){
+                $("section").removeClass("cinza2");
+                $("section").addClass("nude2");
+            });
+
+            $("#apagar").click(function() {
+                $("section").removeClass("nude2");
+                $("section").addClass("cinza2");
+            });
+
+            $("#minhaFoto").mouseenter(function()
+            {
+                $(this).removeClass("foto_sem_mouse");
+                $(this).addClass("foto_com_mouse");
+            });
+
+            $("#minhaFoto").mouseleave(function()
+            {
+                $(this).removeClass("foto_com_mouse");
+                $(this).addClass("foto_sem_mouse");
+            });
+
+            $("#acender").click(function(){
+                $("footer").removeClass("black");
+                $("footer").addClass("white");
+            });
+
+            $("#apagar").click(function() {
+                $("footer").removeClass("white");
+                $("footer").addClass("black");
+            });
+
+            $("#minhaFoto").mouseenter(function()
+            {
+                $("#principal").removeClass("normal");
+                $("#principal").addClass("expandida");
+            });
+
+            $("#minhaFoto").mouseleave(function()
+            {
+                $("#principal").removeClass("expandida");
+                $("#principal").addClass("normal");
+            });
+        });
+    </script>
+
+</html>

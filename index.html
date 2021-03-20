@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="widht-device-widht,initial-scale=1.0">
+    <title>Júlia Beltran</title>
+    <link rel="icon" href="img/JB.png">
+    <link type="text/css" rel="stylesheet" media="screen" href="css/estilo.css"/>
+</head>
+    <body class="claro">
+        <header id="principal" class="normal">
+            <nav role="navigation">
+                <div id="menuToggle">
+                  <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                <ul id="menu">
+                  <li><a href="../index.html">INÍCIO</a></li>
+                  <li><a href="../projetoaw1/html/contato.html">CONTATO</a></li>
+                </ul>
+               </div>
+              </nav>
+            <img id="minhaFoto" class="foto_sem_mouse" src="img/foto.jpeg" alt="Foto pessoal"> 
+            <div>
+                <h1>Júlia Beltran</h1>
+                <h2>Técnica em Informática</h2>
+            <button id="acender"><img src="../projetoaw1/img/sun.png"></button>
+            <button id="apagar"><img src="../projetoaw1/img/moon.png"></button>
+            </div>
+
+
+        </header>
+
+        <section class="nude">
+            <h2>MEU OBJETIVO</h2>
+            <h3>Minha maior meta é continuar sempre aprendendo algo novo e me tornando uma melhor versão de mim.
+            Quero trabalhar e me empenhar em algo que eu ame.</h3>
+        </section>
+
+        <section class="nude">
+            <h2>HABILIDADES</h2>
+            <ul>
+                <li> Desenvolvimento Web (HTML e CSS)</li>
+                <li>Desenvolvimento de Software utilizando diversas linguagens de programação como Java, C, C# e básico de Kotlin</li>
+                <li>Conhecimento de banco de dados (SQL)</li>
+            </ul>
+        </section>
+
+        <section class="nude">
+            <h2>HISTÓRICO ACADÊMICO</h2>
+            <ul>
+                <li>Instituto Federal de São Paulo (2018-2021)
+                    Ensino médio integrado ao técnico de Informática.</li>
+                <li>Colégio Liliental (2006-2017)
+                    Fundamental I e II completo.</li>
+            </ul>
+        </section>
+
+        <section class="nude">
+            <h2>IDIOMAS</h2>
+            <ul>
+                <li>Inglês: intermediário avançado</li>
+                <li>Francês: básico</li>
+                <li>Português: nativo</li>
+            </ul>
+        </section>
+
+        <section class="nude">
+            <h2>EXPERIÊNCIA PROFISSIONAL</h2>
+            <ul>
+                <li><b>Bolsista de Ensino</b></li>
+                <li>Março de 2020 - Dezembro de 2020</li>
+                <li>Participação em projeto de desenvolvimento Web destinado atualmente a construção de um site para uso acadêmico.</li>
+            </ul>
+        </section>
+
+        <section class="nude">
+            <h2>CERTIFICAÇÕES</h2>
+            <ul>
+                <li>Curso de UI/UX (32h)</li>
+                <li>Curso de desenvolvimento Android em Kotlin (32h)</li>
+                <li>Cursos variados de HTML e CSS desenvolvidos em plataformas de cursos online como a Escola Virtual do Bradesco ou a TIM Courses.</li>
+            </ul>
+        </section>
+        
+    </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $("#acender").click(function(){
+            $("section").removeClass("cinza");
+            $("section").addClass("nude");
+        });
+
+        $("#apagar").click(function() {
+            $("section").removeClass("nude");
+            $("section").addClass("cinza");
+        });
+
+        $("#minhaFoto").mouseenter(function()
+        {
+            $(this).removeClass("foto_sem_mouse");
+            $(this).addClass("foto_com_mouse");
+        });
+
+        $("#minhaFoto").mouseleave(function()
+        {
+            $(this).removeClass("foto_com_mouse");
+            $(this).addClass("foto_sem_mouse");
+        });
+
+        $("#minhaFoto").mouseenter(function()
+        {
+            $("#principal").removeClass("normal");
+            $("#principal").addClass("expandida");
+        });
+
+        $("#minhaFoto").mouseleave(function()
+        {
+            $("#principal").removeClass("expandida");
+            $("#principal").addClass("normal");
+        });
+
+    });
+</script>
+</html>
